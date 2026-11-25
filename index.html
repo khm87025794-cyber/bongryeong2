@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>봉령소(封靈所) - 조선 오컬트 세계관</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Malgun Gothic', 'Apple SD Gothic Neo', sans-serif; }
+        body { background-color: #0b0c10; color: #c5c6c7; min-height: 100vh; display: flex; flex-direction: column; align-items: center; padding: 16px; }
+        .container { width: 100%; max-width: 480px; background: #141820; border-radius: 16px; padding: 20px; box-shadow: 0 8px 24px rgba(0,0,0,0.8); border: 1px solid #386663; }
+        .header { text-align: center; padding-bottom: 20px; border-bottom: 1px solid #232b38; margin-bottom: 20px; }
+        h1 { color: #66fcf1; font-size: 24px; letter-spacing: 1px; margin-bottom: 6px; }
+        .sub-title { color: #8c92a4; font-size: 13px; }
+        
+        /* 탭 메뉴 스타일 */
+        .tabs { display: flex; gap: 6px; margin-bottom: 20px; }
+        .tab-btn { flex: 1; padding: 10px 4px; background: #1f2833; border: 1px solid #2c3a47; color: #8c92a4; border-radius: 8px; font-size: 13px; font-weight: bold; cursor: pointer; transition: 0.2s; }
+        .tab-btn.active { background: #45a29e; color: #0b0c10; border-color: #66fcf1; }
+        
+        .tab-content { display: none; animation: fadeIn 0.3s ease; }
+        .tab-content.active { display: block; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(5px); } to { opacity: 1; transform: translateY(0); } }
+
+        .section { margin-bottom: 16px; background: #0b0c10; padding: 16px; border-radius: 12px; border-left: 3px solid #66fcf1; }
+        .section h2 { color: #66fcf1; font-size: 16px; margin-bottom: 10px; }
+        .section p { font-size: 13.5px; line-height: 1.6; color: #e5e5e5; margin-bottom: 8px; }
+        .section p:last-child { margin-bottom: 0; }
+        
+        .card { background: #1a222c; padding: 14px; border-radius: 10px; margin-bottom: 10px; border: 1px solid #2d3e4e; }
+        .card:last-child { margin-bottom: 0; }
+        .card-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px; }
+        .card-title { color: #66fcf1; font-size: 15px; font-weight: bold; }
+        .card-badge { background: #263849; color: #66fcf1; font-size: 11px; padding: 3px 8px; border-radius: 12px; }
+        .card-info { font-size: 12.5px; color: #a3b1c2; margin-bottom: 6px; }
+        .card-desc { font-size: 13px; color: #e5e5e5; line-height: 1.5; }
+        
+        .grade-item { display: flex; align-items: flex-start; gap: 10px; margin-bottom: 10px; padding-bottom: 10px; border-bottom: 1px solid #1f2833; }
+        .grade-item:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+        .grade-num { background: #45a29e; color: #0b0c10; font-weight: bold; font-size: 12px; padding: 2px 8px; border-radius: 4px; white-space: nowrap; }
+        
+        .footer { text-align: center; margin-top: 24px; padding-top: 16px; border-top: 1px solid #232b38; font-size: 11px; color: #5c6b73; }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="header">
+            <h1>[封靈 : 봉령]</h1>
+            <div class="sub-title">현종 11년 (1670년) · 경신대기근과 귀물의 시대</div>
+        </div>
+
+        <div class="tabs">
+            <button class="tab-btn active" onclick="openTab('world', this)">세계관</button>
+            <button class="tab-btn" onclick="openTab('chars', this)">퇴마사 8인</button>
+            <button class="tab-btn" onclick="openTab('ghosts', this)">귀령 등급</button>
+            <button class="tab-btn" onclick="openTab('regions', this)">팔도 고을</button>
+        </div>
+
+        <!-- 1. 세계관 탭 -->
+        <div id="world" class="tab-content active">
+            <div class="section">
+                <h2>📜 시대적 배경</h2>
+                <p><strong>1670년(현종 11년) 조선 팔도.</strong> 끔찍한 경신대기근과 역병이 온 땅을 덮친 혼란의 시기, 영혼을 가두던 국가 비밀 기관 <strong>'봉령소'</strong>가 붕괴하며 수많은 귀물과 원귀들이 세상에 풀려났다.</p>
+            </div>
+            <div class="section">
+                <h2>👑 주인공 ({{user}})</h2>
+                <p>태어날 때부터 귀신을 보고 기척을 느끼는 특이한 영매 체질을 지닌 <strong>조선의 왕세자</strong>. 무예나 퇴마 능력은 없으나, 맑고 강한 영기 때문에 풀려난 귀령들의 집요한 표적이 되고 있다.</p>
+            </div>
+            <div class="section">
+                <h2>⚔️ 여정의 목적</h2>
+                <p>왕명으로 소집된 여덟 명의 정예 퇴마사들의 호위를 받으며, 조선 팔도를 순행해 풀려난 귀물을 봉인하고 봉령소 붕괴 뒤에 숨겨진 진실을 추적한다.</p>
+            </div>
+        </div>
+
+        <!-- 2. 퇴마사 8인 탭 -->
+        <div id="chars" class="tab-content">
+            <div class="card">
+                <div class="card-header"><span class="card-title">1. 서윤화 (24세)</span><span class="card-badge">수장</span></div>
+                <div class="card-info">무기: 장검 「적월」 | 능력: 영검·귀령참</div>
+                <div class="card-desc">검붉은 긴 머리에 호박색 눈동자. 과묵하고 냉철한 진지파로 일행의 중심을 잡는다.</div>
+            </div>
+            <div class="card">
+                <div class="card-header"><span class="card-title">2. 한채령 (23세)</span><span class="card-badge">책사</span></div>
+                <div class="card-info">무기: 철선 「청명」 | 능력: 영맥 분석·진법 해독</div>
+                <div class="card-desc">먹남색 올림머리에 은회색 눈동자. 이성적이고 빈틈없는 지성파 전략가.</div>
+            </div>
+            <div class="card">
+                <div class="card-header"><span class="card-title">3. 이소연 (22세)</span><span class="card-badge">치유</span></div>
+                <div class="card-info">무기: 영침 「회생침」 | 능력: 영맥 안정·회복</div>
+                <div class="card-desc">고동색 땋은 머리에 비취색 눈동자. 조용하고 헌신적으로 다친 이를 먼저 보살핀다.</div>
+            </div>
+            <div class="card">
+                <div class="card-header"><span class="card-title">4. 송매화 (25세)</span><span class="card-badge">환술</span></div>
+                <div class="card-info">무기: 영방울 「몽령」 | 능력: 환각·감각 교란</div>
+                <div class="card-desc">보라색 틀어 올린 머리에 탁한 금색 눈동자. 능글맞고 여유로우며 속을 알 수 없다.</div>
+            </div>
+            <div class="card">
+                <div class="card-header"><span class="card-title">5. 윤서진 (21세)</span><span class="card-badge">봉인</span></div>
+                <div class="card-info">무기: 봉령필 「청묵」 | 능력: 결계·귀물 봉인</div>
+                <div class="card-desc">연한 은금발 생머리에 쪽빛 눈동자. 엄격하고 규율을 중시하는 깐깐한 원칙주의자.</div>
+            </div>
+            <div class="card">
+                <div class="card-header"><span class="card-title">6. 단아 (19세)</span><span class="card-badge">추적</span></div>
+                <div class="card-info">무기: 장도 「흑월」 | 능력: 영흔 감지·귀물 추적</div>
+                <div class="card-desc">칠흑색 로우 포니테일에 자수정색 눈동자. 말수가 적고 예민하며 판단이 빠르다.</div>
+            </div>
+            <div class="card">
+                <div class="card-header"><span class="card-title">7. 강무영 (24세)</span><span class="card-badge">선봉</span></div>
+                <div class="card-info">무기: 장창 「벽뢰」 | 능력: 영력 강화·전열 돌파</div>
+                <div class="card-desc">빛바랜 구릿빛 묶은 머리에 청록색 눈동자. 나른하고 털털하며 동료를 잘 챙긴다.</div>
+            </div>
+            <div class="card">
+                <div class="card-header"><span class="card-title">8. 백설아 (20세)</span><span class="card-badge">저주</span></div>
+                <div class="card-info">무기: 붉은 실 「혈사」 | 능력: 저주 역추적·약화</div>
+                <div class="card-desc">새하얀 은발에 핏빛 붉은 눈동자. 염세적이고 냉소적이지만 두려움이 없는 천재형.</div>
+            </div>
+        </div>
+
+        <!-- 3. 귀령 등급 탭 -->
+        <div id="ghosts" class="tab-content">
+            <div class="section">
+                <h2>👻 귀령 5등급 체계</h2>
+                <div class="grade-item">
+                    <span class="grade-num">1등 · 잡귀</span>
+                    <div class="card-desc">떠도는 약한 혼백. 기본 부적과 주술로 쉽게 퇴치 가능. (예: 물가에 떠도는 혼)</div>
+                </div>
+                <div class="grade-item">
+                    <span class="grade-num">2등 · 악귀</span>
+                    <div class="card-desc">산 자를 해치는 원한 맺힌 귀령. 퇴마사 1~2명으로 제압 가능. (예: 수살귀)</div>
+                </div>
+                <div class="grade-item">
+                    <span class="grade-num">3등 · 흉귀</span>
+                    <div class="card-desc">사람을 흉내 내고 마을을 공포에 빠뜨리는 기괴한 귀물. (예: 장산범, 어둑시니)</div>
+                </div>
+                <div class="grade-item">
+                    <span class="grade-num">4등 · 대귀</span>
+                    <div class="card-desc">오랜 세월을 산 강력한 요괴 및 원귀. 정예 퇴마조 출동 필요. (예: 구미호, 두억시니)</div>
+                </div>
+                <div class="grade-item">
+                    <span class="grade-num">5등 · 재앙</span>
+                    <div class="card-desc">고을 하나를 멸하는 최상위 귀령. 봉령소 붕괴의 근원. (예: 불가살이)</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 4. 팔도 고을 탭 -->
+        <div id="regions" class="tab-content">
+            <div class="card">
+                <div class="card-header"><span class="card-title">1. 한양</span><span class="card-badge">왕성과 봉령청</span></div>
+                <div class="card-desc">굶주린 백성과 귀령의 기척이 궁궐 담벼락까지 밀려드는 혼란의 중심지.</div>
+            </div>
+            <div class="card">
+                <div class="card-header"><span class="card-title">2. 개성</span><span class="card-badge">상업과 몰락의 고을</span></div>
+                <div class="card-desc">빈 상점가와 인적 끊긴 저잣거리에서 기이한 웃음소리가 들리는 곳.</div>
+            </div>
+            <div class="card">
+                <div class="card-header"><span class="card-title">3. 강릉</span><span class="card-badge">동해안과 물가의 고을</span></div>
+                <div class="card-desc">거친 파도와 함께 물가의 혼백들이 떠돌며 해안 마을을 집어삼킨 지역.</div>
+            </div>
+            <div class="card">
+                <div class="card-header"><span class="card-title">4. 전주</span><span class="card-badge">호남의 곡창지대</span></div>
+                <div class="card-desc">흉년으로 황폐해진 논밭 사이로 굶주린 원귀와 역귀가 들끓는 곳.</div>
+            </div>
+            <div class="card">
+                <div class="card-header"><span class="card-title">5. 안동</span><span class="card-badge">삼림과 산악의 고을</span></div>
+                <div class="card-desc">깊은 산길에서 사람의 목소리를 흉내 내는 괴물이 나타나는 험준한 산간 지역.</div>
+            </div>
+            <div class="card">
+                <div class="card-header"><span class="card-title">6. 진주</span><span class="card-badge">남쪽의 관문</span></div>
+                <div class="card-desc">역병과 기근으로 고을 전체가 시신과 흉흉한 소문으로 가득 찬 폐허의 고을.</div>
+            </div>
+        </div>
+
+        <div class="footer">
+            Bongryeongso World-Building · Interactive Archive
+        </div>
+    </div>
+
+    <script>
+        function openTab(tabId, btn) {
+            document.querySelectorAll('.tab-content').forEach(el => el.classList.remove('active'));
+            document.querySelectorAll('.tab-btn').forEach(el => el.classList.remove('active'));
+            document.getElementById(tabId).classList.add('active');
+            btn.classList.add('active');
+        }
+    </script>
+
+</body>
+  </html>
